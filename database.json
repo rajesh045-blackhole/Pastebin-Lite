@@ -1,0 +1,74 @@
+{
+  "pmj931d0": {
+    "id": "pmj931d0",
+    "content": "hi how r u",
+    "created_at": "2026-01-03T07:22:25.800Z",
+    "ttl_seconds": 600,
+    "max_views": 5,
+    "view_count": 1,
+    "expire_at": "2026-01-03T07:32:25.800Z",
+    "title": "story telling",
+    "language": "plaintext",
+    "password": null
+  },
+  "0pzu90qe": {
+    "id": "0pzu90qe",
+    "content": "# Pastebin-Lite\n\nA secure, ephemeral text storage application allowing users to create text pastes with optional time-based expiry (TTL) and view-count limits.\n\n## Project Description\n\nPastebin-Lite is a Full-Stack Node.js and React application that allows users to:\n1.  **Create Pastes**: Encrypt and store arbitrary text.\n2.  **Share Links**: Generate unique URLs for sharing.\n3.  **Set Constraints**: Apply \"Burn after reading\" (view limits) or time limits (TTL).\n\n## Architecture\n\n*   **Frontend**: React 18 (Client-side routing via `BrowserRouter`).\n*   **Backend**: Node.js + Express.\n*   **Persistence**: File-based JSON storage (`database.json`) for simplicity and portability in this assignment.\n\n## How to Run the App Locally\n\n### Prerequisites\n*   Node.js v18+\n*   npm\n\n### Setup and Run\n\n1.  **Install Dependencies**:\n    ```bash\n    npm install\n    ```\n\n2.  **Start the Server**:\n    ```bash\n    npm start\n    ```\n    This starts the Express server at `http://localhost:3000`.\n\n3.  **Open in Browser**:\n    Visit [http://localhost:3000](http://localhost:3000).\n\n*Note: The server handles both the API endpoints (`/api/*`) and serves the frontend static files.*\n\n## API Endpoints\n\n*   `POST /api/pastes`: Create a new paste.\n*   `GET /api/pastes/:id`: Retrieve a paste (view count incremented).\n*   `GET /api/healthz`: Check server and database health.\n\n## Persistence\n\nThe application uses a local file `database.json` to store paste data. This ensures data survives server restarts, satisfying the robustness requirement for local testing.\n\n## Testing Mode\n\nThe backend respects the `x-test-now-ms` header to allow deterministic testing of expiry logic.\n",
+    "created_at": "2026-01-03T07:23:44.490Z",
+    "ttl_seconds": 600,
+    "max_views": 5,
+    "view_count": 1,
+    "expire_at": "2026-01-03T07:33:44.490Z",
+    "title": "readme.md",
+    "language": "plaintext",
+    "password": null
+  },
+  "l3tzhxuu": {
+    "id": "l3tzhxuu",
+    "content": "# Pastebin-Lite\n\nA secure, ephemeral text storage application allowing users to create text pastes with optional time-based expiry (TTL) and view-count limits.\n\n## Project Description\n\nPastebin-Lite is a Full-Stack Node.js and React application that allows users to:\n1.  **Create Pastes**: Encrypt and store arbitrary text.\n2.  **Share Links**: Generate unique URLs for sharing.\n3.  **Set Constraints**: Apply \"Burn after reading\" (view limits) or time limits (TTL).\n\n## Architecture\n\n*   **Frontend**: React 18 (Client-side routing via `BrowserRouter`).\n*   **Backend**: Node.js + Express.\n*   **Persistence**: File-based JSON storage (`database.json`) for simplicity and portability in this assignment.\n\n## How to Run the App Locally\n\n### Prerequisites\n*   Node.js v18+\n*   npm\n\n### Setup and Run\n\n1.  **Install Dependencies**:\n    ```bash\n    npm install\n    ```\n\n2.  **Start the Server**:\n    ```bash\n    npm start\n    ```\n    This starts the Express server at `http://localhost:3000`.\n\n3.  **Open in Browser**:\n    Visit [http://localhost:3000](http://localhost:3000).\n\n*Note: The server handles both the API endpoints (`/api/*`) and serves the frontend static files.*\n\n## API Endpoints\n\n*   `POST /api/pastes`: Create a new paste.\n*   `GET /api/pastes/:id`: Retrieve a paste (view count incremented).\n*   `GET /api/healthz`: Check server and database health.\n\n## Persistence\n\nThe application uses a local file `database.json` to store paste data. This ensures data survives server restarts, satisfying the robustness requirement for local testing.\n\n## Testing Mode\n\nThe backend respects the `x-test-now-ms` header to allow deterministic testing of expiry logic.\n",
+    "created_at": "2026-01-03T07:41:09.704Z",
+    "ttl_seconds": 600,
+    "max_views": 10,
+    "view_count": 0,
+    "expire_at": "2026-01-03T07:51:09.704Z",
+    "title": "readme.md",
+    "language": "plaintext",
+    "password": "pastebin"
+  },
+  "9xe2rfzg": {
+    "id": "9xe2rfzg",
+    "content": "http://192.168.68.138:3000",
+    "created_at": "2026-01-03T07:56:08.980Z",
+    "ttl_seconds": 600,
+    "max_views": 10,
+    "view_count": 1,
+    "expire_at": "2026-01-03T08:06:08.980Z",
+    "title": null,
+    "language": "plaintext",
+    "password": null
+  },
+  "kmj2tg64": {
+    "id": "kmj2tg64",
+    "content": "His Jen's",
+    "created_at": "2026-01-03T07:58:35.348Z",
+    "ttl_seconds": 600,
+    "max_views": 2,
+    "view_count": 2,
+    "expire_at": "2026-01-03T08:08:35.348Z",
+    "title": "Bbb",
+    "language": "plaintext",
+    "password": null
+  },
+  "gx5ncu7j": {
+    "id": "gx5ncu7j",
+    "content": "lbakev",
+    "created_at": "2026-01-03T09:33:01.857Z",
+    "ttl_seconds": 600,
+    "max_views": 5,
+    "view_count": 0,
+    "expire_at": "2026-01-03T09:43:01.857Z",
+    "title": null,
+    "language": "plaintext",
+    "password": null
+  }
+}

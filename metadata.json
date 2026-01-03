@@ -1,0 +1,5 @@
+{
+  "name": "Pastebin-Lite",
+  "description": "A secure, ephemeral text storage application with time-based and view-based expiration logic.",
+  "requestFramePermissions": []
+}
