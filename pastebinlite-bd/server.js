@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
 const PROJECT_ROOT = process.cwd();
-const DB_FILE = path.join(PROJECT_ROOT, 'pastebinlite-bd', 'database.json');
+const DB_FILE = path.join(__dirname, 'database.json');
 
 export function createServer() {
 	const app = express();
@@ -262,19 +262,17 @@ export function createServer() {
 	});
 
 	// Serve Static Frontend (must be after API routes)
-	const distDir = path.join(PROJECT_ROOT, 'pastebin-lite-fd', 'dist');
+	const distDir = path.resolve(__dirname, '../pastebin-lite-fd', 'dist');
 	app.use(express.static(distDir));
 
 	// Fallback for SPA routing
-	app.get('*', (req, res) => {
-		if (!req.path.startsWith('/api')) {
+	app.get(/^(?!\/api).*$/, (req, res) => {
 			const indexPath = path.join(distDir, 'index.html');
 			if (fs.existsSync(indexPath)) {
 				res.sendFile(indexPath);
 			} else {
 				res.status(404).send('Frontend build not found. Please run "npm run build" first.');
 			}
-		}
 	});
 
 	return app;
