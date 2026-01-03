@@ -16,8 +16,8 @@ export async function initSchema() {
       id text primary key,
       content text not null,
       created_at timestamptz not null default now(),
-      ttl_seconds integer,
-      max_views integer,
+      ttl_seconds integer check (ttl_seconds >= 0),
+      max_views integer check (max_views >= 1),
       view_count integer not null default 0,
       expire_at timestamptz,
       title text,
@@ -25,4 +25,8 @@ export async function initSchema() {
       password text
     );
   `);
+
+  // Indexes for efficient queries and cleanup
+  await pool.query('create index if not exists idx_pastes_expire_at on pastes(expire_at) where expire_at is not null');
+  await pool.query('create index if not exists idx_pastes_created_at on pastes(created_at)');
 }
