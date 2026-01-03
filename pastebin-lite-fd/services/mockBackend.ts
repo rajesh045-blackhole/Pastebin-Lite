@@ -1,5 +1,8 @@
 import { CreatePasteRequest, PasteResponse, ViewPasteResponse, Paste } from '../types';
 
+// API base: configured via VITE_API_BASE_URL, defaults to dev proxy '/api'
+const API_BASE: string = (import.meta as any).env?.VITE_API_BASE_URL || '/api';
+
 // --- LocalStorage Fallback Implementation ---
 const STORAGE_KEY = 'pastebin_lite_db';
 const loadDB = (): Record<string, Paste> => {
@@ -29,7 +32,7 @@ export const createPaste = async (data: CreatePasteRequest): Promise<PasteRespon
 			password: data.password
 		};
 
-		const res = await fetch('/api/pastes', {
+				const res = await fetch(`${API_BASE}/pastes`, {
 			method: 'POST',
 			headers: getTestHeaders(),
 			body: JSON.stringify(payload),
@@ -69,14 +72,14 @@ export const createPaste = async (data: CreatePasteRequest): Promise<PasteRespon
 
 	return {
 		id,
-		url: `${window.location.origin}/p/${id}`,
+		url: `${window.location.origin}/#/p/${id}`,
 		expireAt
 	};
 };
 
 export const getPaste = async (id: string, password?: string): Promise<ViewPasteResponse> => {
 	try {
-		let url = `/api/pastes/${id}`;
+		let url = `${API_BASE}/pastes/${id}`;
 		if (password) url += `?password=${encodeURIComponent(password)}`;
     
 		const res = await fetch(url, { method: 'GET', headers: getTestHeaders() });
@@ -152,7 +155,7 @@ export const getPaste = async (id: string, password?: string): Promise<ViewPaste
 
 export const checkHealth = async (): Promise<boolean> => {
 	try {
-		const res = await fetch('/api/healthz');
+		const res = await fetch(`${API_BASE}/healthz`);
 		return res.ok;
 	} catch {
 		return false;
