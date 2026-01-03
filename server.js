@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
 const PROJECT_ROOT = process.cwd();
-const DB_FILE = path.join(PROJECT_ROOT, 'database.json');
+const DB_FILE = path.join(PROJECT_ROOT, 'backend', 'database.json');
 
 export function createServer() {
   const app = express();
