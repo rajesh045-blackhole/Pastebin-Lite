@@ -262,7 +262,7 @@ export function createServer() {
   });
 
   // Serve Static Frontend (must be after API routes)
-  const distDir = path.join(PROJECT_ROOT, 'dist');
+  const distDir = path.join(PROJECT_ROOT, 'frontend', 'dist');
   app.use(express.static(distDir));
 
   // Fallback for SPA routing
