@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm ci && npm run build",
+  "functions": {
+    "api/server.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/server.js" },
+    { "src": "/(.*)", "dest": "/dist/$1" },
+    { "src": "/", "dest": "/dist/index.html" }
+  ]
+}
