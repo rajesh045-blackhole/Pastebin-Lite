@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/server.js" },
-    { "source": "/", "destination": "/frontend/dist/index.html" },
-    { "source": "/(.*)", "destination": "/frontend/dist/$1" }
+    { "source": "/", "destination": "/pastebin-lite-fd/dist/index.html" },
+    { "source": "/(.*)", "destination": "/pastebin-lite-fd/dist/$1" }
   ]
 }

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3000;
 const DATABASE_URL = process.env.DATABASE_URL;
 const PROJECT_ROOT = process.cwd();
-const DB_FILE = path.join(PROJECT_ROOT, 'backend', 'database.json');
+const DB_FILE = path.join(PROJECT_ROOT, 'pastebinlite-bd', 'database.json');
 
 export function createServer() {
 	const app = express();
@@ -262,7 +262,7 @@ export function createServer() {
 	});
 
 	// Serve Static Frontend (must be after API routes)
-	const distDir = path.join(PROJECT_ROOT, 'frontend', 'dist');
+	const distDir = path.join(PROJECT_ROOT, 'pastebin-lite-fd', 'dist');
 	app.use(express.static(distDir));
 
 	// Fallback for SPA routing

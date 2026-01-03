@@ -2,14 +2,14 @@
   "name": "pastebin-lite",
   "version": "1.0.0",
   "description": "A secure, ephemeral text storage application.",
-  "main": "backend/server.js",
+  "main": "pastebinlite-bd/server.js",
   "type": "module",
   "scripts": {
-    "dev": "vite --config frontend/vite.config.ts",
-    "start": "node backend/server.js",
-    "build": "vite build --config frontend/vite.config.ts",
-    "preview": "vite preview --config frontend/vite.config.ts",
-    "serve": "npm run build && node backend/server.js"
+    "dev": "vite --config pastebin-lite-fd/vite.config.ts",
+    "start": "node pastebinlite-bd/server.js",
+    "build": "vite build --config pastebin-lite-fd/vite.config.ts",
+    "preview": "vite preview --config pastebin-lite-fd/vite.config.ts",
+    "serve": "npm run build && node pastebinlite-bd/server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
